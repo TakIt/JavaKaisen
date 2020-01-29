@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>setShip</title>
+</head>
+<body>
+<p>あなたの戦艦の位置を決めてください</p>
+<form action="/HomePage" method="post">
+    <p>縦</p>
+    <input type="radio" name="width" value="0" checked="checked">Y0
+    <input type="radio" name="width" value="1">Y1
+    <input type="radio" name="width" value="2">Y2
+    <input type="radio" name="width" value="3">Y3
+    <input type="radio" name="width" value="4">Y4
+    <p>横</p>
+    <input type="radio" name="length" value="0" checked="checked">X0
+    <input type="radio" name="length" value="1">X1
+    <input type="radio" name="length" value="2">X2
+    <input type="radio" name="length" value="3">X3
+    <input type="radio" name="length" value="4">X4
+    <br><br>
+    <button type="submit">決定</button>
+</form>
+
+</body>
+</html>

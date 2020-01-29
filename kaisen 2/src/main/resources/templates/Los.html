@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja"xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Los</title>
+</head>
+<body>
+<div>
+    <p>負けました</p>
+</div>
+
+<p>Player</p>
+<table border>
+    <thead>
+    <th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+    </thead>
+    <tr  th:each="pl:${player}">
+        <th th:text="${plStat.index}"></th>
+        <td th:text="${pl[0].getLabel()}"></td>
+        <td th:text="${pl[1].getLabel()}"></td>
+        <td th:text="${pl[2].getLabel()}"></td>
+        <td th:text="${pl[3].getLabel()}"></td>
+        <td th:text="${pl[4].getLabel()}"></td>
+    </tr>
+</table>
+
+
+<p>Enemy</p>
+<table border>
+    <thead>
+    <th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+    </thead>
+    <tr  th:each="cp:${cpu}">
+        <th th:text="${cpStat.index}"></th>
+        <td th:text="${cp[0].getLabel()}"></td>
+        <td th:text="${cp[1].getLabel()}"></td>
+        <td th:text="${cp[2].getLabel()}"></td>
+        <td th:text="${cp[3].getLabel()}"></td>
+        <td th:text="${cp[4].getLabel()}"></td>
+    </tr>
+</table>
+<div>
+    <form action="/Result" method="post">
+        <button type="submit">戦績へ</button>
+    </form>
+</div>
+</body>
+</html>
